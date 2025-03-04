@@ -1,7 +1,9 @@
 import random
 import math
 
-def is_valid(i):
+# ИГРА В УГАДАЙ ЧИСЛО
+
+def is_valid(i): # Функция проверки ввденого консоли на число
     if True != i.isdigit():
         return False
     i = float(i)
@@ -17,8 +19,8 @@ count = 0
 print('Добро пожаловать в числовую угадайку')
 print('Каким максимально возможным может быть загаданное число? ')
 end = int(input())
-n = random.randint(1,end)
-while True:
+n = random.randint(1,end)   # Создание угадывыаемого числа
+while True:             
     print(f'Введите любое целое число от 1 до {end}')
     n1 = input()
     if is_valid(n1) == True:

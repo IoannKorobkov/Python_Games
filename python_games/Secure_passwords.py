@@ -1,13 +1,14 @@
 import random
+# СОЗДАНИЕ БЕЗОПАСНОГО ПАРОЛЯ
 
-def generate_password(length,chars):
+def generate_password(length,chars): # Функция генерация самого пароля случайным образом из полученных данных(будут ли прописные или строчные буквы, цифры) 
     password = []
     for i in range(length):
         password.append(random.choice(chars))
     password = ''.join(password)
     return password
 
-def isitdigit(z):
+def isitdigit(z):                   # Проверка на с консоли на цифру
     while False == z.isdigit():
         print('Нужно ввести цифру')
         z = input()
@@ -15,7 +16,7 @@ def isitdigit(z):
         z = int(z)
         return(z)
     
-def isitalpha(z):
+def isitalpha(z):                   # Проверка ввденого с консоли на букву
     while False == z.isalpha():
         print('Нужно ввести "да" или "нет"')
         z = input()
